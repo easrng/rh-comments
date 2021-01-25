@@ -10,7 +10,7 @@
     const newComments = await res.json();
     comments = newComments;
     let main=document.querySelector("main");
-    new ResizeObserver(()=>window.parent.postMessage({commentHeight:main.getBoundingClientRect().height},"*")).observe(m)
+    new ResizeObserver(()=>window.parent.postMessage({commentHeight:main.getBoundingClientRect().height},"*")).observe(main)
   });
 </script>
 
