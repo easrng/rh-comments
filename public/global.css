@@ -1,11 +1,17 @@
+body,html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 main {
-  box-sizing: border-box;
-  font-family: 'SF Pro Text', 'SF Pro Icons', system-ui, 'Helvetica Neue', 'Helvetica',
-    'Arial', sans-serif;
-  hyphens: auto;
-  line-height: 1.5;
-  margin: 0 auto;
-  max-width: 680px;
+    font-family: 'SF Pro Text', 'SF Pro Icons', system-ui, 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    hyphens: auto;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 680px;
+    width: 100%;
+    padding: 1rem;
 }
 
 .replies {
@@ -26,4 +32,19 @@ main {
 
 .comment:not(:last-child) {
     margin-bottom: 0.5rem;
+}
+
+.button {
+    font:inherit;
+    display: inline-flex;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    background: #363636;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    padding: 0.25rem 1rem;
+    margin-bottom: 0.8rem;
+    box-shadow: 0 2px 5px #00000029, 0 1px 2px #5050507d, inset 0 1px 1px #fff4, inset 0 -1px 1px #0004;
 }
