@@ -1,5 +1,4 @@
 <script>
-  import Comment from './Comment.svelte';
   export let comment;
 </script>
 
