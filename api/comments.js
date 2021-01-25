@@ -1,5 +1,5 @@
 const fetch=require("node-fetch")
-const { DOMParser }=new require("jsdom").JSDOM("").window;
+const { DOMParser }=(new (require("jsdom").JSDOM)("")).window;
 module.exports = async (req, res) => {
   res.status(200).json([...(new DOMParser().parseFromString(await (await fetch("https://routinehub.co/shortcut/"+encodeURIComponent(req.query.id)+"/")).text(),"text/html")).querySelectorAll(".feedback>[data-feedback-id]")].map(function e2j(e){
 let user=decodeURIComponent(e.querySelector('a[href*="/user/"]').href.match(/\/user\/([^\/\?\&]+)/)[1]);
