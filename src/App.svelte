@@ -9,7 +9,8 @@
     const res = await fetch("/api/comments.js?id="+encodeURIComponent(rhid));
     const newComments = await res.json();
     comments = newComments;
-    new ResizeObserver((e)=>window.parent.postMessage({commentHeight:(e[0]||e).contentRect.bottom},"*")).observe(document.querySelector("main"))
+    let main=document.querySelector("main");
+    new ResizeObserver(()=>window.parent.postMessage({commentHeight:main.getBoundingClientRect().height},"*")).observe(m)
   });
 </script>
 
