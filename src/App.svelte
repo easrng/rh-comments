@@ -1,17 +1,19 @@
 <script>
   import { onMount } from "svelte";
   import Comment from './Comment.svelte';
+  let rhid=new URLSearchParams(location.search).get("rhid")
   export let comments;
+  export let commentLink="https://routinehub.co/shortcut/"+encodeURIComponent(rhid)+"/#:~:text=Feedback,-Leave";
 
   onMount(async () => {
-    const res = await fetch("/api/comments.js?id=6565");
+    const res = await fetch("/api/comments.js?id="+encodeURIComponent(rhid));
     const newComments = await res.json();
     comments = newComments;
   });
 </script>
 
 <main>
-  <h1>Comments</h1>
+  <a href={commentLink}>Post a comment</a>
   <div class="comments">
     {#if !comments}
       Loading comments...
