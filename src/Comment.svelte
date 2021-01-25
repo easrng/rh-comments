@@ -8,7 +8,7 @@
   {#if comment.children.length>1}
     <div class="replies">
       {#each comment.children as reply}
-        <:Self comment={reply} />
+        <svelte:self comment={reply} />
     	{/each}
     </div>
   {/if}
