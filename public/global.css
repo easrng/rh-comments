@@ -31,6 +31,8 @@ main {
     border-radius: 5px;
     padding: 0.4rem;
     box-shadow: 0 1px 0 #0000008c, 0 0px 2px #0000001a;
+    display: grid;
+    grid-gap: 0.5rem;
 }
 
 .comment:not(:last-child) {
