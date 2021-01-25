@@ -1,7 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 body,html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 main {
@@ -46,5 +49,37 @@ main {
     border-radius: 0.25rem;
     padding: 0.25rem 1rem;
     margin-bottom: 0.8rem;
-    box-shadow: 0 2px 5px #00000029, 0 1px 2px #5050507d, inset 0 1px 1px #fff4, inset 0 -1px 1px #0004;
+}
+
+.tag {
+    margin-left: 0.5rem;
+    display: inline-flex;
+    height: 1.35em;
+    background: #52a79b;
+    color: #fff;
+    padding: 0.25em 0.6em;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rem;
+}
+
+.userinfo {
+    display: flex;
+    align-items: baseline;
+}
+
+.date {
+    color: #727272;
+    margin-left: 1rem;
+}
+
+.user {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #000;
+    text-decoration-color: #0005;
+}
+
+.tag-author {
+    background: #52a760;
 }
