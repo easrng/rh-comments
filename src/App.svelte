@@ -13,7 +13,7 @@
 </script>
 
 <main>
-  <a href={commentLink}>Post a comment</a>
+  <a href={commentLink} class="button">Post a comment</a>
   <div class="comments">
     {#if !comments}
       Loading comments...
